@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap%27');
+
+
+h1 {
+    text-align: center;
+    padding-top: 85px;
+    font-size: 85px;
+    font-family: 'Open Sans';
+}
+.form {
+    text-align: center;
+  }
+#form-search { 
+    width: 450px;
+    line-height: 32px;
+    padding: 20px 10px;
+  }
+  
+  .form #form-search {
+    padding: 0 8px;
+  }
