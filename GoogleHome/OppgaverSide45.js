@@ -1,12 +1,13 @@
-var Høyde = 130;
-var MinimumHøyde = 100;
-var Maxhøyde = 180;
-if (Høyde > MinimumHøyde && Høyde < Maxhøyde) {
-    console.log("Høy nok");
+var gratis = 0<=3;
+var rabatt = 4<=15;
+var rabatt2 = 67<=67;
+
+if (gratis > rabatt && gratis < rabatt2) {
+    console.log("Du kan kjøre gratis");
 } 
-else if (Høyde < MinimumHøyde) {
-    console.log("Du er for lav");
+else if (gratis < rabatt) {
+    console.log("Du får 50% rabbat siden du er mellom 4-15 år");
 }
-else if (Høyde > Maxhøyde) {
-    console.log("Du er for høy");
+else if (gratis > rabatt2) {
+    console.log("Du får 50% rabbat siden");
 }
