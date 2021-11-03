@@ -21,6 +21,19 @@
     <img id="r" scr="Monty_Hall\rod.png" width="227" height="324" alt="Dør">
     <img id="g" scr="Monty_Hall\gronn.png" width="227" height="324" alt="Dør">
     <img id="b" scr="Monty_Hall\blaa.png" width="227" height="324" alt="Dør">
+<script>
+    var rodDorE1 = document.querySelector("#r")
+    var gronnDorE1 = document.querySelector("#g")
+    var blaaDorE1 = document.querySelector("#b")
 
+    rodDorE1.addEventListener("click", sjekkDor);
+    gronnDorE1.addEventListener("click", sjekkDor);
+    blaaDorE1.addEventListener("click", sjekkDor);
+
+    function sjekkDor(e) {
+        consloe.log(e.target);
+        console.log(e.type);
+    }
+</script>
 </body>
 </html>
