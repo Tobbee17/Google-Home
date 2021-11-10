@@ -2,8 +2,48 @@
 <html>
    <head>
        <title>Stein Saks Papir</title>
-       
+       <meta charset="UTF-8">
+       <style>
+           body {
+               font-family: "Century Gothic", arial, sans-serif;
+               background-color: #ecf0f1;
+           }
+           img {
+               margin: 10px;
+           }
+           #maskin {
+               margin-left: 110px;
+           }
+           .innpakning {
+               width: 980px;
+               margin: 120px auto;
+               font-size: 0;
+           }
+           p {
+               font-size: 21px;
+           }
+           #stein, #saks, #papir {
+               cursor: pointer;
+           }
+       </style>
     </head>
+    <body>
 
+        <div class="innpakning">
+
+            <p id="spillerPoeng"> <b>Spiller:</b> 0 </p>
+            <p id="maskinPoeng"> <b>Maskin:</b> 0 </p>
+
+            <img src="Sten,Saks,Papir\stein.png" width="200" height="200" alt="spiller stein" id="stein">
+            <img src="Sten,Saks,Papir\saks.png" width="200" height="200" alt="spiller saks" id="saks">
+            <img src="Sten,Saks,Papir\papir.png" width="200" height="200" alt="spiller papir" id="papir">
+            <img src="Sten,Saks,Papir\maskin_ukjent.png" width="200" height="200" alt="maskinens valg" id="maskin">
+
+            <p id="info"></p>
+        </div>
+        <script>
+
+        </script>
+    </body>
 
 </html>
