@@ -42,7 +42,28 @@
             <p id="info"></p>
         </div>
         <script>
+            var VINNERSUM = 5;
+            var spillerPoeng =0;
+            var maskinPoeng =0;
 
+            var spillerPoengEl = document.querySelector("#spillerPoeng");
+            var maskinPoengEl = document.querySelector("#maskinPoeng");
+            var infoEl = document.querySelector("#info");
+
+            var steinEl = document.querySelector("#stein");
+            var saksEl = document.querySelector("#saks");
+            var papirEl = document.querySelector("#papir");
+            var maskinEl = document.querySelector("#maskin");
+
+            steinEl.addEventListener("click", sjekkResultat);
+            saksEl.addEventListener("click", sjekkResultat);
+            papirEl.addEventListener("click", sjekkResultat);
+
+            infoEl.innerHTML = "Velg stein, saks eller papir. Førstemann till" + VINNERSUM + "poeng vinner spillet. ";
+
+            function sjekkResultat(e) {
+                console.log("Du klikket på et bilde.");
+            }
         </script>
         </body>
 </html>
