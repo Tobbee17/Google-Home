@@ -63,7 +63,7 @@
 
             function sjekkResultat(e) {
                 console.log("Du klikket på et bilde.");
-            }
+            
 
             var spillerValg = e.target.id;
             console.log("Spiller valgte: "+ spillerValg);
@@ -81,11 +81,48 @@
 
             console.log("Maskinen valgte: " + maskinValg);
 
-            maskinEl.src ="SteinSaksPapir/Pictures/maskin_" + maskinValg + ".png";
+            maskinEl.src ="Pictures/" + maskinValg + ".png";
 
             if (spillerValg === maskinValg) {
-                
+            } else if (spillerValg === "stein") {
+                if (maskinValg === "saks") {
+                    spillerPoeng++;
+            } else if (maskinValg === "papir"){
+                maskinPoeng++;
             }
+            } else if (spillerValg === "saks") {
+                if (maskinValg === "papir") {
+                    spillerPoeng++;
+                } else if (maskinValg === "stein") {
+                    maskinPoeng++;
+                }
+            } else if (spillerValg === "papir") {
+                if (maskinValg === "stein") {
+                    spillerPoeng++;
+                } else if (maskinValg === "saks") {
+                    maskinPoeng++;
+                }
+            }
+        
+        spillerPoengEl.innerHTML = "<b>Spiller: </b>" + spillerPoeng;
+        maskinPoeng.innerHTML = "<b>Spiller: </b>" + maskinPoeng; 
+        
+        if (spillerPoeng === VINNERSUM || maskinPoeng === VINNERSUM) {
+            steinEl.removeEventListener("click", sjekkResultat);
+            saksEl.removeEventListener("click", sjekkResultat);
+            papirEl.removeEventListener("click", sjekkResultat);
+
+            steinEl.style.cursor = "auto";
+            saksEl.style.cursor = "auto";
+            papirEl.style.cursor = "auto";
+
+            if (spillerPoeng === VINNERSUM) {
+                infoEl.innerHTML = "Gratulerer! Du vant!";
+            } else {
+                infoEl.innerHTML = "Auda! Du ble slått av en maskin...";
+            }
+        }
+    }
         </script>
         </body>
 </html>
