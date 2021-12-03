@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keydown-hendelse</title>
+    <meta charset="UTF-8">
+    <style>
+        html, body {
+            height: 100%
+        }
+        body {
+            background-color: #e0e0e0;
+            font-family: "Century Gothic", Arial, sans-serif;
+            font-size: 14px;
+            color: #323232;
+        }
+        p {
+            background-color: #f05a3f;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="trykket">keyCode: </p>
+
+<script>
+    var trykketEl = document.querySelector("trykket");
+    var bodyEl = document.querySelector("body");
+    var knapp = String.fromCharCode(e.keyCode);
+    console.log(knapp);
+
+    
+    bodyEl.addEventListener("keydown", sjekkKnapp);
+
+    function sjekkKnapp (e) {
+        trykketEl.innerHTML = "keyCode: " + e.keyCode;
+    if (e.keyCode === 87) {
+        console.log("Du trykket på w-knappen")
+    }
+}
+</script>
+</body>
+</html>
